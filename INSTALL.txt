@@ -1,0 +1,7 @@
+Instructions
+- Copy the include directory and index.html to the root of your web-server (/var/www)
+- Run LegoR2D2.py
+- In your web browser go to http://x.x.x.x/ to see the control page to drive R2D2
+
+How does this work?
+The /var/www/ content is served by the main webserver (apache, etc).  LegoR2D2.py runs a REST API on port 8000.  When the user clicks on a button on the web page, AJAX is used to send a request to the LegoR2D2 REST API to tell it to move forward, backward, etc.  When the user releases the button we send another request to tell it to stop.
